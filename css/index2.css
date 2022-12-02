@@ -82,94 +82,78 @@ body {
     background-color: var(--orange);
 }
 
-.container {
-    padding: 0 20px;
-    margin: 0 auto;
-    max-width: 1200px;
-    padding-bottom: 70px;
+.container .shopping-cart{
+    padding: 20px 0;
 }
 
-.container .heading{
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 40px;
-    text-transform: uppercase;
-    color: var(--black);  
-}
-
-.container .user-profile {
-    padding: 20px;
-    text-align: center;
-    border: var(--border);
-    box-shadow: var(--box-shadow);
-    border-radius: 5px;
-    margin: 20px auto;
-    max-width: 500px;
-}
-
-.container .user-profile p {
-    margin-bottom: 10px;
-    font-size: 25px;
-    color: var(--black);
-}
-
-.container .user-profile p span {
-    color: var(--red);
-}
-
-.container .user-profile .flex {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: flex-end;
-}
-
-.container .products .box-container{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-}
-
-.container .products .box-container .box{
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: var(--box-shadow);
-    border: var(--border);
-    position: relative;
-    padding: 20px;
-    background-color: var(--white);
-    width: 350px;
-}
-
-.container .products .box-container .box img{
-    height: 250px;
-}
-
-.container .products .box-container .box .name{
-    font-size: 20px;
-    color: var(--black);
-    padding: 5px 0;
-}
-
-.container .products .box-container .box .price{
-    position: absolute;
-    top: 10px; left: 10px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    background-color: var(--orange);
-    color: var(--white);
-    font-size: 25px;
-}
-
-.container .products .box-container .box input[type="number"]{
-    margin: 5px 0;
+.container .shopping-cart table{
     width: 100%;
+    text-align: center;
     border: var(--border);
     border-radius: 5px;
-    font-size: 20px;
-    color: var(--black);
-    padding: 12px 14px;
+    box-shadow: var(--box-shadow);
+    background-color: var(--white);
 }
 
+.container .shopping-cart table thead{
+    background-color: var(--black);
+}
+
+.container .shopping-cart table thead th{
+    padding: 10px;
+    color: var(--white);
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+.container .shopping-cart table .table-bottom{
+    background-color: var(--light-bg);
+}
+
+.container .shopping-cart table tr td{
+    padding: 10px;
+    font-size: 20px;
+    color: var(--black);
+}
+
+.container .shopping-cart table tr td:nth-child(1){
+    padding: 0;
+}
+
+.container .shopping-cart table tr td input[type="number"]{
+    width: 80px;
+    border: var(--border);
+    padding: 12px 14px;
+    font-size: 20px;
+    color: var(--black);
+}
+
+.container .shopping-cart .cart-btn{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.container .shopping-cart .disabled{
+    pointer-events: none;
+    background-color: var(--red);
+    opacity: .5;
+    user-select: none;
+}
+
+@media (max-width: 1200px) {
+    .container .shopping-cart{
+        overflow-x: scroll;
+    }
+    .container .shopping-cart table{
+        width: 1200px;
+    }
+}
+
+@media (max-width: 450px) {
+    .container .heading{
+        font-size: 30px;
+    }
+    .container .products .box-container .box img{
+        height: 200px;
+    }
+}
